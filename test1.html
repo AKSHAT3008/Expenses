@@ -1,0 +1,83 @@
+<html>
+  <style>
+    body {
+      background-image: url("https://bloximages.chicago2.vip.townnews.com/qctimes.com/content/tncms/assets/v3/editorial/4/81/481cb886-051d-53d7-850c-8d35bd5590b0/5b7ef571ae906.image.jpg");
+    }
+    #table-design {
+      align-self: flex-start;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      border-radius: 10;
+    }
+    #main-holder {
+      width: 50%;
+      height: 70%;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+      border-radius: 7px;
+      box-shadow: 0px 0px 5px 2px rgb(255, 255, 255);
+    }
+  </style>
+
+  <head>
+    <script>
+      function writeTable() {
+        var table;
+        var uInput = document.test.input.value;
+        var Value2 = document.test.Value2.value;
+        var Value3 = document.test.Value3.value;
+        table = "<table><tr><th colspan=3>Table Header</th></tr>";
+
+        table += "<tr><th>column1</th><th>column2</th><th>column3</th></tr>";
+
+        table += `<tr><td id="tdd">${uInput}</td>
+        <td id="tdd">${Value2}</td><td id="tdd">${Value3}</td></tr>`;
+        document.write(table);
+      }
+    </script>
+  </head>
+  <body>
+    <main id="main-holder">
+      <form name="test" id="table-design">
+        <table>
+          <tr>
+            <td>
+              <font style="Times New Roman" face="helvetica, arial"
+                >Expense detail</font
+              >
+            </td>
+
+            <td><input type="text" name="input" /></td>
+          </tr>
+          <tr>
+            <td>
+              <font style="Times New Roman" face="helvetica, arial"
+                >Expenditure</font
+              >
+            </td>
+            <td><input type="text" name="Value2" /></td>
+          </tr>
+          <tr>
+            <td>
+              <font style="Times New Roman" face="helvetica, arial">Date</font>
+            </td>
+            <td><input type="text" name="Value3" /></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <input
+                type="submit"
+                name="submit"
+                value="View"
+                onclick="writeTable()"
+              />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </main>
+  </body>
+</html>
